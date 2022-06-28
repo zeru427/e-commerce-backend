@@ -2,7 +2,7 @@ node {
     def mvnHome = tool 'MyMaven'
     def dockerImageTag = "zeruyang001/zerudockerhub{env.BUILD_NUMBER}"
     stage('clone repo'){
-        git 'https://github.com/zeru427/project2.git'
+        git 'https://github.com/zeru427/e-commerce-backend.git'
         mvnHome = tool 'MyMaven'
     }
     stage('Build Project 2'){
