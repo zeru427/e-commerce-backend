@@ -1,9 +1,4 @@
-FROM openjdk
-
-copy ./target/e-commerce-1.0.jar /workspace/e-commerce-1.0.jar
-
-WORKDIR /workspace
-
-EXPOSE 5000
-
-ENTRYPOINT [ "java", "-jar", "e-commerce-1.0.jar" ]
+FROM openjdk:8
+EXPOSE 8085
+ADD target/project2.jar app.jar
+ENTRYPOINT [ "java" , "-jar" , "/app.jar"]
